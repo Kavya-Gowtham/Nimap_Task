@@ -6,9 +6,9 @@ function Navigationbar() {
       <div className="navbar">
         <h1 className="logo">LOGO</h1>
         <div className="nav-link">
-          <a href="#Home">Home</a>
-          <a href="#Tasks">Tasks</a>
-          <a href="#User">User</a>
+          <a href="/">Home</a>
+          <a href="Tasks">Tasks</a>
+          <a href="User">User</a>
         </div>
       </div>
     </div>
