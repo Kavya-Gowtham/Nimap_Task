@@ -19,12 +19,12 @@ function Tasks() {
       {items.map((item) => (
         <React.Fragment>
           <button className="delete-btn">Delete</button>
-          <p id="task" key={item.id}>
-            <p>{item.id}</p> <p>{item.title}</p> <p>{item.completed}</p>
-          </p>
+          <ul id="task" key={item.id}>
+            <li>{item.id}</li> <li>{item.title}</li> <li>{item.completed}</li>
+          </ul>
         </React.Fragment>
       ))}
-      <button className="add-btn">Add Item</button>
+      <button className="add-btn">Add Task</button>
     </div>
   );
 }

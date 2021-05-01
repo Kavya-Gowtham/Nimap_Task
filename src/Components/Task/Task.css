@@ -3,7 +3,7 @@
   height: 30px;
   background-color: rgb(211, 81, 81);
   float: right;
-  margin-top: 20px;
+  margin-top: 13px;
   color: white;
 }
 .task-list {
@@ -25,7 +25,15 @@
   background-color: rgb(6, 129, 185);
   float: left;
   color: white;
+  margin: 20px;
 }
-#task > p {
+#task li {
+  padding: 10px;
   padding-left: 5rem;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }
