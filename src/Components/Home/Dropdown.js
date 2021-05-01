@@ -1,24 +1,48 @@
 import React, { useState } from "react";
 import "./Home.css";
+import message from "./Message";
 
 function Dropdown() {
-  const [dropstate, setDropState] = useState("");
+  const [dropdownItems] = useState([
+    {
+      label: "Dropdown1",
+      value: "dropdown1",
+    },
+    {
+      label: "Dropdown2",
+      value: "dropdown2",
+    },
+    {
+      label: "Dropdown3",
+      value: "dropdown3",
+    },
+  ]);
+
+  const [value, setValue] = useState();
+
+  //functions & event listeners
+  function dropdownHandler(e) {
+    setValue(e.target.value);
+  }
   return (
     <div>
       <select
+        id="select"
         className="dropdown"
-        value={dropstate}
-        onChange={(e) => {
-          setDropState(e.target.value);
-        }}
+        value={value}
+        onChange={dropdownHandler}
       >
-        <option value="dropdown1">Dropdown1</option>
-        <option value="dropdown2">Dropdown2</option>
-        <option className="dropdown-list" value="dropdown3">
-          Dropdown3
-        </option>
-        <option value="dropdown4">Dropdown4</option>
+        {dropdownItems.map((item) => (
+          <option key={item.value} value={item.value}>
+            {item.label}
+          </option>
+        ))}
       </select>
+      {message.map((data) => (
+        <p className="info" key={data.id}>
+          {data.Passage}
+        </p>
+      ))}
     </div>
   );
 }
