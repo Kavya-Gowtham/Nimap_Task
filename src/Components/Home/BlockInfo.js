@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Message from "./Message";
 
 function BlockInfo(props) {
   console.log(props.value);

@@ -33,6 +33,7 @@ body {
   font-size: 24px;
   padding: 10px 40px;
   transition: all 0.3s ease;
+  list-style-type: none;
 }
 .navbar li a:hover {
   background-color: black;
@@ -54,5 +55,16 @@ body {
 
 .tab:focus,
 .tab li:active {
+  background-color: black;
+}
+.navbar li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.nav-link li:hover {
   background-color: black;
 }

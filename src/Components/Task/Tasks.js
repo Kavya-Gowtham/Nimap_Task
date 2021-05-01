@@ -57,6 +57,7 @@ function Tasks() {
         paginationPerPage="10"
         noHeader={true}
       />
+      <button className="add-btn">Add Task</button>
     </div>
   );
 }
