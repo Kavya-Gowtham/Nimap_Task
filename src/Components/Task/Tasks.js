@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Task.css";
 
 function Tasks() {
   useEffect(() => {
@@ -10,18 +11,20 @@ function Tasks() {
   const fetchItems = async () => {
     const data = await fetch("http://jsonplaceholder.typicode.com/todos");
     const items = await data.json();
-    console.log(items);
+    console.log(items.completed);
     setItems(items);
   };
   return (
-    <div>
+    <div className="task-list">
       {items.map((item) => (
-        <p key={item.id}>
-          {item.id} {item.title} {item.completed}
-          <button>Delete</button>
-        </p>
+        <React.Fragment>
+          <button className="delete-btn">Delete</button>
+          <p id="task" key={item.id}>
+            <p>{item.id}</p> <p>{item.title}</p> <p>{item.completed}</p>
+          </p>
+        </React.Fragment>
       ))}
-      <button>Add Item</button>
+      <button className="add-btn">Add Item</button>
     </div>
   );
 }
