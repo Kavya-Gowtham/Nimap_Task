@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 
-function Dropdown() {
+function Dropdown(props) {
   const [dropstate, setDropState] = useState("");
   return (
     <div>
@@ -10,6 +10,7 @@ function Dropdown() {
         value={dropstate}
         onChange={(e) => {
           setDropState(e.target.value);
+          props.parentCallback(e.target.value);
         }}
       >
         <option value="dropdown1">Dropdown1</option>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./User.css";
-
+import { BrowserRouter as Link } from "react-router-dom";
 function User() {
   function ChangePassword(e) {
     console.log(e.target.name);
@@ -19,7 +19,9 @@ function User() {
         </label>
       </form>
       <button onClick={ChangePassword}>Change Password</button>
-      <button>Logout</button>
+      <Link to="/">
+        <button>Logout</button>
+      </Link>
     </div>
   );
 }

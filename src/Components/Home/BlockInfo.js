@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-function BlockInfo() {
+function BlockInfo(props) {
   return (
     <div>
       <p className="info">
@@ -25,7 +25,7 @@ function BlockInfo() {
         called “controlled components”.
       </p>
       <h3 className="note">
-        NOTE: Here should be the text related to selected dropdown option.
+        NOTE: Here should be the text related to selected {props.value} option.
       </h3>
     </div>
   );
