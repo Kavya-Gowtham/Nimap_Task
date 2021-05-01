@@ -9,15 +9,21 @@ function Navigationbar() {
   return (
     <Router>
       <ul className="navbar">
-        <span className="logo">LOGO</span>
+        <h1 className="logo">LOGO</h1>
         <li>
-          <Link to="/home">Home</Link>
+          <Link className="tab" to="/home">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/Tasks">Tasks</Link>
+          <Link className="tab" to="/Tasks">
+            Tasks
+          </Link>
         </li>
         <li>
-          <Link to="/User">User</Link>
+          <Link className="tab" to="/User">
+            User
+          </Link>
         </li>
       </ul>
       <Switch>

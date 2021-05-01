@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import Button from "@material-ui/core/Button";
+import "./Task.css";
 
 function Tasks() {
   const [task, setTask] = useState("");
@@ -24,20 +25,16 @@ function Tasks() {
   };
   const columns = [
     {
-      name: "Id",
       selector: "id",
     },
     {
-      name: "Title",
       selector: "title",
     },
     {
-      name: "completed",
       selector: "completed",
       cell: (row) => <span>{row.completed ? "True" : "False"}</span>,
     },
     {
-      name: "",
       selector: "id",
       cell: (row) => (
         <Button
@@ -52,13 +49,13 @@ function Tasks() {
     },
   ];
   return (
-    <div>
-      <h1>TASK List</h1>
+    <div className="task-list">
       <DataTable
         columns={columns}
         data={task}
         pagination={true}
         paginationPerPage="10"
+        noHeader={true}
       />
     </div>
   );

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navigationbar from "./Components/Navigationbar";
-import { BrowserRouter as Router, useHistory } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Login from "./Login/Login";
 import LoginValues from "./config";
+import history from "./history";
 
 function App() {
-  let history = useHistory();
   const [authFlag, setAuthFlag] = useState(false);
   const [errFlag, setErrFlag] = useState(false);
   const authCheck = (val) => {
@@ -17,6 +17,7 @@ function App() {
     ) {
       setAuthFlag(true);
       setErrFlag(false);
+      history.push("/home");
     } else {
       setErrFlag(true);
     }

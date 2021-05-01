@@ -6,9 +6,8 @@ body {
   height: 40px;
   margin: 20px;
 }
-.dropdown-list {
-}
-option {
+
+#list {
   font-weight: 0;
   display: 0;
   white-space: 0;

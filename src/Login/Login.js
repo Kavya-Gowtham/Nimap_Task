@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Login.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -22,21 +23,20 @@ function Login(props) {
   };
   return (
     <div className="Login">
-      <h1>Login</h1>
-      <div className={classes.root}>
+      <h1>LOGIN</h1>
+      <div id="login-fields" className={classes.root}>
         <TextField
-          id="outlined-basic"
+          id="standard-basic"
           label="UserName"
-          variant="outlined"
           value={loginData.username}
           name="username"
           onChange={handleChange}
         />
         <TextField
-          id="outlined-basic"
+          id="standard-password-input"
           label="Password"
-          variant="outlined"
           name="password"
+          type="password"
           value={loginData.password}
           onChange={handleChange}
         />
